@@ -1,6 +1,7 @@
-FROM microsoft/nanoserver:sac2016
+FROM mcr.microsoft.com/windows/nanoserver:1809
 
 COPY ./traefik.exe /traefik.exe
+COPY ./netapi32.dll /windows/system32/netapi32.dll
 
 EXPOSE 80
 ENTRYPOINT ["/traefik"]
